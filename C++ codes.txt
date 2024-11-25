@@ -1,0 +1,206 @@
+// Online C++ compiler to run C++ program online
+/*#include <iostream>
+#include <string>
+
+using namespace std;
+class humanbeing{
+    public :
+    string name;
+    void introduce(){
+        cout<<"My name is "<<name<<endl;
+    }
+};
+int main() {
+   humanbeing babu;
+   babu.name = "Veera ";
+   babu.introduce();
+   humanbeing man;
+   man.name = "Karthik";
+   man.introduce();
+    return 0;
+}*/
+
+//creating objects from class in diffrent ways using arrow operator
+
+/*#include <bits/stdc++.h>
+using namespace std;
+
+class humanbeing{
+    public:
+    string name;
+    void introduce(){
+        cout<<"Enter thye name:" <<name<<endl;
+        
+    }
+    
+};
+int main(){
+    humanbeing man;
+    humanbeing *name_1 = new humanbeing();
+    man.name = "sandhya ";
+    man.introduce();
+    man.name = "Priya";
+    man.introduce();
+    name_1->name = "HII ra mama ";
+    name_1->introduce();
+    name_1 ->name = "How ARE you ";
+    name_1->introduce();
+    return 0;
+    
+}
+*/
+//sum of array using class and object 
+/*
+#include <iostream>
+using namespace std;
+ 
+class Array {
+private:
+    int arr[5]; // Array to hold 5 integers
+ 
+public:
+    // Function to input array elements
+    void inputArray() {
+        cout << "Enter 5 elements of the array:" << endl;
+        for (int i = 0; i < 5; i++) {
+            cin >> arr[i];
+        }
+    }
+ 
+    // Function to calculate the sum of array elements
+    int sumArray() {
+        int sum = 0;
+        for (int i = 0; i < 5; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }   
+};
+ 
+int main() {
+    Array myArray; // Create an object of the Array class
+    myArray.inputArray(); // Call the function to input array elements
+    int sum = myArray.sumArray(); // Call the function to calculate the sum
+    cout << "Sum of all elements of the array is: " << sum << endl;
+    return 0;
+}
+*/
+
+//single inheritance 
+//addition 
+/*
+#include <iostream>
+#include <string>
+
+using namespace std;
+class name{
+  public:
+  int N_a;
+  
+};
+class B : public name{
+    public: int b;
+    B(){
+        N_a = 10;
+        b = 10;
+        
+    }
+    void sum(){
+        cout<<"sum of the number "<<N_a + b<<endl;
+    }
+};
+int main(){
+    B obj;
+    obj.sum();
+    return 0;
+}
+*/
+//pure vitual function
+/*#include<bits/stdc++.h>
+using namespace std;
+class base{
+    public:
+    virtual void display(){
+        cout<<"vitual function hlo"<<endl;
+    }
+    void show(){
+        cout<<"non virtual function "<<endl;
+        
+    }
+};
+class derived: public base{
+  void display(){
+      cout<<"vitual function in derived class "<<endl;
+      
+  }  
+  void show(){
+      cout<<"non virtual function in derived class "<<endl;
+  }
+};
+int main(){
+    base *bobj;
+    base obj;
+    bobj = &obj;
+    cout<<"base class pointer point to base class"<<endl;
+    bobj -> display();
+    bobj -> show();
+   /* derived babu;
+    
+    obj= &babu;
+    cout<<"derived class pointer to point classs "<<endl;
+    babu -> display();
+    babu -> show();
+    
+    
+    return 0;
+}
+*/
+//swaping using template 
+/*
+#include <bits/stdc++.h>
+using namespace std;
+template <typename T>
+void SwapingValue(T &a, T &b){
+    int temp = a;
+    a = b;
+    b = temp;
+    
+};
+int main(){
+    int a = 20, b = 50;
+    long lg = 1000000000000l, lg1= 2000000000l;
+    float f1 = 2.38, f2 = 3.87;
+    cout<<"Before swaping the elements "<<endl;
+    cout<< "X = "<<a<< " " << "Y = "<<b<<endl;
+    cout<< "X = "<<lg<< " " << "Y = "<<lg1<<endl;
+    cout<< "X = "<<f1<< " " << "Y = "<<f2<<endl;
+    cout<<"After swaping the elements "<<endl ;
+    SwapingValue(a,b);
+    SwapingValue(lg,lg1);
+    SwapingValue(f1,f2);
+    cout<< "X = "<<a<< " " << "Y = "<<b<<endl;
+    cout<< "X = "<<lg<< " " << "Y = "<<lg1<<endl;
+    cout<< "X = "<<f1<< " " << "Y = "<<f2<<endl;
+    return 0;
+}
+*/
+#include <iostream>
+using namespace std;
+int main(){
+    int* p = new int;
+    *p = 10;
+    cout<<"value of P: "<<*p<<endl;
+    int* arr = new int[5];
+    for(int i=0; i<5; ++i){
+        arr[i] = i*2;
+    }
+    cout<<"Array Elements "<<endl;
+    for(int i = 0; i<5; ++i){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    delete p;
+    delete[] arr;
+    return 0;
+    cout<<p<<endl;
+}
