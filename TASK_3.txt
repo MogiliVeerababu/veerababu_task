@@ -1,0 +1,71 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Bankaccount 
+{
+    private:
+        string HolderName;
+        int accountNumber;
+        double balance;
+    public:
+        
+    void setHolderName(string name)
+    {
+        HolderName = name;
+    }
+    void getHolderName() const
+    {
+        cout<<HolderName<<endl;
+    }
+    
+     void setaccountNumber(int accountNumber)
+    {
+        this->accountNumber=accountNumber;
+    }
+    void getaccountNumber() const {
+        cout<<accountNumber<<endl;
+    }
+    void addMoneyToAccount(double amount)
+    {
+        if(amount > 0){
+            balance = balance + amount; 
+            cout<< "deposit successfull "<< balance <<endl;
+        }
+        else{
+            cout<<"Invalid"<<endl;
+        }
+        
+   }
+   void withdrawMoney(int amount)
+   {
+       if(amount > 0 && amount <= balance){
+           balance = balance - amount ;
+           cout<<"Withdrawal sucessfully : "<< balance <<endl;
+       }
+   }
+   void checking_balance()
+   {
+       cout<<"Account Holder Name: "<< HolderName<<endl;
+       cout<<"Balance " << balance <<endl;
+   }
+   
+    
+};
+
+int main() {
+   
+Bankaccount obj;
+obj.setHolderName("Babu");
+obj.getHolderName();
+
+obj.setaccountNumber(768968);
+obj.getaccountNumber();
+
+obj.addMoneyToAccount(50000);
+
+obj.withdrawMoney(400);
+
+obj.checking_balance();
+
+    return 0;
+}
