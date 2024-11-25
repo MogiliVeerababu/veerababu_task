@@ -33,7 +33,7 @@ class humanbeing{
         
     }
     
-};
+};//create main class
 int main(){
     humanbeing man;
     humanbeing *name_1 = new humanbeing();
